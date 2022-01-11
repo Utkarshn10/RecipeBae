@@ -5,7 +5,7 @@ import {useState} from "react";
 
 function PostCard({url, title, date, explanation}) {
   const [isLiked, updateLike] = useState(false);
-  const [button, updateButton] = useState("btn btn-success");
+  const [button, updateButton] = useState("btn btn-primary");
 
   const handleLike = () => {
     if (!isLiked) {
