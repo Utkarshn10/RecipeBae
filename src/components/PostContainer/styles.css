@@ -1,0 +1,7 @@
+.posts-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    border-radius: 30px;
+    padding-top: 1rem;
+}
