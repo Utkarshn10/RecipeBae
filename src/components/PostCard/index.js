@@ -5,7 +5,6 @@ import {useState} from "react";
 
 function PostCard({url, title, date, explanation}) {
   const [isLiked, updateLike] = useState(false);
-  const [button, updateButton] = useState("btn btn-primary");
 
   const handleLike = () => {
     if (!isLiked) {
@@ -26,22 +25,22 @@ function PostCard({url, title, date, explanation}) {
       <div className="card-body">
         <h5 className="card-title">{title}</h5>
         <p className="card-text">{explanation}</p>
-        <button
-          padding-left="0.5rem"
-          className={button}
-          onClick={handleLike}
-          disabled={isLiked}
-        >
-          Like
-        </button>
-        <button
-          padding-left="0.5rem"
-          class={button}
-          onClick={handleLike}
-          disabled={!isLiked}
-        >
-          Unlike
-        </button>
+        <div>
+          <button
+            className="like btn btn-primary"
+            onClick={handleLike}
+            disabled={isLiked}
+          >
+            Like
+          </button>
+          <button
+            className="unlike btn btn-primary"
+            onClick={handleLike}
+            disabled={!isLiked}
+          >
+            Unlike
+          </button>
+        </div>
       </div>
     </div>
   );
