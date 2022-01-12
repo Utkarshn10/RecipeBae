@@ -10,7 +10,7 @@ function AppNavbar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             {/* <Nav.Link href="#home">About</Nav.Link> */}
-            <Nav.Link href="https://github.com/Utkarshn10/Spacestagram">Login</Nav.Link>
+            <Nav.Link href="https://github.com/Utkarshn10/Spacestagram">Github</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
