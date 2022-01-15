@@ -1,8 +1,6 @@
 {
   "name": "meals",
   "version": "0.1.0",
-  "private": true,
-  "homepage": "http://Utkarshn10.github.io/Spacestagram",
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.8",
     "@testing-library/jest-dom": "^5.16.1",

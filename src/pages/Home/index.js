@@ -9,12 +9,8 @@ function Home() {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
     axios
-      .get(
-        "https://api.nasa.gov/planetary/apod?&api_key=coBGhXlRua3X4s9GNhqbaAOr5Z9yfZVzg9Dx93fd&start_date=2017-07-08&end_date=2017-08-10"
-      )
-      .then((data) => setPosts(data.data))
-      // .get("https://www.themealdb.com/api/json/v1/1/search.php?s")
-      // .then(({data}) => setPosts(data.meals))
+      .get("https://www.themealdb.com/api/json/v1/1/search.php?s")
+      .then(({data}) => setPosts(data.meals))
       .catch((error) => console.log(error.message));
   });
   return (
