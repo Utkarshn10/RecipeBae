@@ -3,6 +3,7 @@ import styles from "./styles.css";
 import {InputGroup, Button, FormControl} from "react-bootstrap";
 
 function Jumbotron() {
+  const [searchInput, setsearchInput] = useState("");
   return (
     <div className="jumbotron">
       <h1>Meals</h1>
@@ -14,7 +15,13 @@ function Jumbotron() {
             aria-label="Meal Search Input"
             aria-describedby="meal-search-button"
           ></FormControl>
-          <button type="button" class="btn btn-danger">
+          <button
+            type="button"
+            value={searchInput}
+            onChange={(e) => e.target.value}
+            class="btn btn-danger"
+            onClick={handleSearch}
+          >
             Search
           </button>
         </InputGroup>
