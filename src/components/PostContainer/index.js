@@ -6,9 +6,7 @@ function PostsContainer({posts}) {
   return (
     <div className="posts-container">
       {posts?.map((post) => (
-        <div key={post.idMeal}>
-          <PostCard {...post} />
-        </div>
+        <PostCard key={post.idMeal} {...post} />
       ))}
     </div>
   );
