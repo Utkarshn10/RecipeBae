@@ -1,14 +1,16 @@
 import "./App.css";
-import Appcontext from "./context";
+import AppContext from "./context";
+import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 
 function App() {
   return (
-    <Appcontext>
+    <AppContext>
       <div>
+        <Navbar />
         <Home />
       </div>
-    </Appcontext>
+    </AppContext>
   );
 }
 

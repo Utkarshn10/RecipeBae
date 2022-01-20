@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../../components/Navbar";
 import Jumbotron from "../../components/Jumbotron";
 import {useEffect, useContext} from "react";
 import axios from "axios";
@@ -17,7 +16,6 @@ function Home() {
 
   return (
     <div>
-      <Navbar />
       <Jumbotron />
       <PostContainer posts={posts} />
     </div>
