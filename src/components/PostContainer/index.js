@@ -5,8 +5,10 @@ import PostCard from "../PostCard";
 function PostsContainer({posts}) {
   return (
     <div className="posts-container">
-      {posts?.map((post) => (
-        <PostCard key={post.idMeal} {...post} />
+      {posts.map((post) => (
+        <div key={post.idMeal}>
+          <PostCard {...post} />
+        </div>
       ))}
     </div>
   );

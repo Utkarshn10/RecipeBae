@@ -5,11 +5,10 @@ import {MyContext} from "../../context";
 import axios from "axios";
 
 function Jumbotron() {
-  const {posts, setPosts} = useContext(MyContext);
+  const {setPosts} = useContext(MyContext);
   const [searchInput, setsearchInput] = useState("");
 
   function handleSearch() {
-    console.log(searchInput);
     axios
       .get(
         `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchInput}`
