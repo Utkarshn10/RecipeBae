@@ -11,8 +11,9 @@ function Home() {
   useEffect(() => {
     axios
       .get("https://www.themealdb.com/api/json/v1/1/search.php?s")
-      .then(({data}) => setPosts(data.meals));
-  });
+      .then(({data}) => setPosts(data.meals))
+      .catch((error) => console.log(error));
+  }, []);
 
   return (
     <div>

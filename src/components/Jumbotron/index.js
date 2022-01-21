@@ -8,13 +8,16 @@ function Jumbotron() {
   const {setPosts} = useContext(MyContext);
   const [searchInput, setsearchInput] = useState("");
 
+  function handleChange(e) {
+    setsearchInput(e.target.value);
+  }
+
   function handleSearch() {
     axios
       .get(
         `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchInput}`
       )
       .then(({data}) => setPosts(data.meals));
-    // .then((res) => console.log(res));
   }
   return (
     <div className="jumbotron">
@@ -23,11 +26,11 @@ function Jumbotron() {
       <div className="button-input">
         <InputGroup className="mb-3">
           <FormControl
-            placeholder="Seach for a meal"
+            placeholder="Search for a meal"
             aria-label="Meal Search Input"
             aria-describedby="meal-search-button"
             value={searchInput}
-            onChange={(e) => setsearchInput(e.target.value)}
+            onChange={handleChange}
           ></FormControl>
           <button
             type="button"
