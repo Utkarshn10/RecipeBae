@@ -1,9 +1,15 @@
-import React from "react";
-import {Card, Button} from "react-bootstrap";
+import React, {useState} from "react";
+import {Card} from "react-bootstrap";
 import "./styles.css";
-import {useState} from "react";
+import MealModal from "../MealModal";
 
-function PostCard({strCategory, strArea, strMealThumb, strMeal}) {
+function PostCard({
+  strCategory,
+  strInstructions,
+  strArea,
+  strMealThumb,
+  strMeal,
+}) {
   const [isLiked, updateLike] = useState(false);
 
   const handleLike = () => {
@@ -20,7 +26,7 @@ function PostCard({strCategory, strArea, strMealThumb, strMeal}) {
       <Card.Body>
         <Card.Title>{strMeal}</Card.Title>
         <Card.Text>{strArea}</Card.Text>
-        <Button variant="primary">See More</Button>
+        <MealModal strMeal={(strMeal, strInstructions)} />
       </Card.Body>
     </Card>
   );
