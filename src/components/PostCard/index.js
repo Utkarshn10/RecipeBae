@@ -26,7 +26,7 @@ function PostCard({
       <Card.Body>
         <Card.Title>{strMeal}</Card.Title>
         <Card.Text>{strArea}</Card.Text>
-        <MealModal strMeal={(strMeal, strInstructions)} />
+        <MealModal title={strMeal} description={strInstructions} />
       </Card.Body>
     </Card>
   );

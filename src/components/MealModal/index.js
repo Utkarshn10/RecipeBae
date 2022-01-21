@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import {Modal, Button} from "react-bootstrap";
 
-function MealModal({strMeal, strInstructions}) {
+function MealModal({title, description}) {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -14,9 +14,10 @@ function MealModal({strMeal, strInstructions}) {
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          {/* <Modal.Title>{strMeal}</Modal.Title> */}
+          <Modal.Title>{title}</Modal.Title>
         </Modal.Header>
-        <Modal.Body>{strMeal}</Modal.Body>
+        {/* <Modal.Body>{description}</Modal.Body> */}
+        <Modal.Body>{description}</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
