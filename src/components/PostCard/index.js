@@ -30,7 +30,7 @@ function PostCard({
         <MealModal
           title={strMeal}
           description={strInstructions}
-          ingredients={strYoutube}
+          video={strYoutube}
         />
       </Card.Body>
     </Card>

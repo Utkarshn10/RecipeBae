@@ -12,6 +12,12 @@ function Jumbotron() {
     setsearchInput(e.target.value);
   }
 
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      handleSearch();
+    }
+  };
+
   function handleSearch() {
     axios
       .get(
@@ -21,16 +27,17 @@ function Jumbotron() {
   }
   return (
     <div className="jumbotron">
-      <h1>Meals</h1>
-      <h4>Search your favorite meals</h4>
+      <h1 style={{fontSize: "4rem"}}>Meals</h1>
+      <h6 style={{fontSize: "1.5rem"}}>Search your favorite meals</h6>
       <div className="button-input">
         <InputGroup className="mb-3">
           <FormControl
-            placeholder="Search for a meal"
+            placeholder="Search for cuisine or a dish"
             aria-label="Meal Search Input"
             aria-describedby="meal-search-button"
             value={searchInput}
             onChange={handleChange}
+            onKeyDown={handleKeyDown}
           ></FormControl>
           <button
             type="button"

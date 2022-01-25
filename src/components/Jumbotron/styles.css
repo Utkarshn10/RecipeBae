@@ -9,9 +9,10 @@
     align-items: center;
     flex-direction: column;
 }
-.jumbotron h1,h4{
+.jumbotron h1,h6{
     color: white;
 }
+
 .button-input {
     margin-top: 1rem;
     width: 60%;
