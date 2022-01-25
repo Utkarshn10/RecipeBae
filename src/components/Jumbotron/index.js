@@ -25,46 +25,73 @@ function Jumbotron() {
       .get(
         `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchInput}`
       )
-      .then(({data}) => setPosts(data.meals))
-      .catch((e) => {
-        console.log("jwehfhejfhg");
-        setFound(false);
+      .then(({data}) => {
+        setPosts(data.meals);
+        if (!found) setFound(true);
+        if (data.meals === null) {
+          setFound(false);
+        }
       });
   }
 
-  // if (!found) {
-  //   return (
-  //     <div>
-  //       <Error />
-  //     </div>
-  //   );
-  // } else {
-  return (
-    <div className="jumbotron">
-      <h1 style={{fontSize: "4rem"}}>Meals</h1>
-      <h6 style={{fontSize: "1.5rem"}}>Search your favorite meals</h6>
-      <div className="button-input">
-        <InputGroup className="mb-3">
-          <FormControl
-            placeholder="Search for cuisine or a dish"
-            aria-label="Meal Search Input"
-            aria-describedby="meal-search-button"
-            value={searchInput}
-            onChange={handleChange}
-            onKeyDown={handleKeyDown}
-          ></FormControl>
-          <button
-            type="button"
-            className="btn btn-danger"
-            onClick={handleSearch}
-          >
-            Search
-          </button>
-        </InputGroup>
+  if (!found) {
+    return (
+      <>
+        <div className="jumbotron">
+          <h1 style={{fontSize: "4rem"}}>Meals</h1>
+          <h6 style={{fontSize: "1.5rem"}}>Search your favorite meals</h6>
+          <div className="button-input">
+            <InputGroup className="mb-3">
+              <FormControl
+                placeholder="Search for cuisine or a dish"
+                aria-label="Meal Search Input"
+                aria-describedby="meal-search-button"
+                value={searchInput}
+                onChange={handleChange}
+                onKeyDown={handleKeyDown}
+              ></FormControl>
+              <button
+                type="button"
+                className="btn btn-danger"
+                onClick={handleSearch}
+              >
+                Search
+              </button>
+            </InputGroup>
+          </div>
+        </div>
+        <div className="error">
+          <Error />
+        </div>
+      </>
+    );
+  } else {
+    return (
+      <div className="jumbotron">
+        <h1 style={{fontSize: "4rem"}}>Meals</h1>
+        <h6 style={{fontSize: "1.5rem"}}>Search your favorite meals</h6>
+        <div className="button-input">
+          <InputGroup className="mb-3">
+            <FormControl
+              placeholder="Search for cuisine or a dish"
+              aria-label="Meal Search Input"
+              aria-describedby="meal-search-button"
+              value={searchInput}
+              onChange={handleChange}
+              onKeyDown={handleKeyDown}
+            ></FormControl>
+            <button
+              type="button"
+              className="btn btn-danger"
+              onClick={handleSearch}
+            >
+              Search
+            </button>
+          </InputGroup>
+        </div>
       </div>
-    </div>
-  );
-  // }
+    );
+  }
 }
 
 export default Jumbotron;
