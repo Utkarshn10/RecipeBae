@@ -5,7 +5,7 @@ function AppNavbar() {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand href="/"> Meals</Navbar.Brand>
+        <Navbar.Brand href="/"> Recipe Bae</Navbar.Brand>
       </Container>
     </Navbar>
   );

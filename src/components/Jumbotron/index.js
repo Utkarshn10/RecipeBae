@@ -38,8 +38,8 @@ function Jumbotron() {
     return (
       <>
         <div className="jumbotron">
-          <h1 style={{fontSize: "4rem"}}>Meals</h1>
-          <h6 style={{fontSize: "1.5rem"}}>Search your favorite meals</h6>
+          <h1 style={{fontSize: "4rem"}}>Recipe Bae</h1>
+          <h6 style={{fontSize: "2rem"}}>Search your favorite meals</h6>
           <div className="button-input">
             <InputGroup className="mb-3">
               <FormControl
@@ -68,8 +68,8 @@ function Jumbotron() {
   } else {
     return (
       <div className="jumbotron">
-        <h1 style={{fontSize: "4rem"}}>Meals</h1>
-        <h6 style={{fontSize: "1.5rem"}}>Search your favorite meals</h6>
+        <h1 style={{fontSize: "4rem"}}>Recipe Bae</h1>
+        <h6 style={{fontSize: "2rem"}}>Search your favorite meals</h6>
         <div className="button-input">
           <InputGroup className="mb-3">
             <FormControl
