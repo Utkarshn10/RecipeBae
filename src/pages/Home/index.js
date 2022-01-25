@@ -7,7 +7,6 @@ import {MyContext} from "../../context";
 import Error from "../404/404";
 function Home() {
   const {posts, setPosts} = useContext(MyContext);
-  const [found, setFound] = useState(true);
 
   useEffect(() => {
     axios
@@ -15,23 +14,14 @@ function Home() {
       .then(({data}) => setPosts(data.meals))
       .catch((error) => {
         console.log(error);
-        setFound(false);
       });
   }, []);
 
-  if (!found) {
-    return (
-      <div>
-        <Error />
-      </div>
-    );
-  } else {
-    return (
-      <div>
-        <Jumbotron />
-        <PostContainer posts={posts} />
-      </div>
-    );
-  }
+  return (
+    <div>
+      <Jumbotron />
+      <PostContainer posts={posts} />
+    </div>
+  );
 }
 export default Home;

@@ -2,11 +2,13 @@ import React, {useState, useContext} from "react";
 import styles from "./styles.css";
 import {InputGroup, FormControl} from "react-bootstrap";
 import {MyContext} from "../../context";
+import Error from "../../pages/404/404";
 import axios from "axios";
 
 function Jumbotron() {
   const {setPosts} = useContext(MyContext);
   const [searchInput, setsearchInput] = useState("");
+  const [found, setFound] = useState(true);
 
   function handleChange(e) {
     setsearchInput(e.target.value);
@@ -23,8 +25,20 @@ function Jumbotron() {
       .get(
         `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchInput}`
       )
-      .then(({data}) => setPosts(data.meals));
+      .then(({data}) => setPosts(data.meals))
+      .catch((e) => {
+        console.log("jwehfhejfhg");
+        setFound(false);
+      });
   }
+
+  // if (!found) {
+  //   return (
+  //     <div>
+  //       <Error />
+  //     </div>
+  //   );
+  // } else {
   return (
     <div className="jumbotron">
       <h1 style={{fontSize: "4rem"}}>Meals</h1>
@@ -50,6 +64,7 @@ function Jumbotron() {
       </div>
     </div>
   );
+  // }
 }
 
 export default Jumbotron;
