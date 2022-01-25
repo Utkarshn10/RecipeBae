@@ -1,33 +1,39 @@
 import React, {useState} from "react";
 import {Modal, Button} from "react-bootstrap";
+import "./styles.css";
 
-function MealModal({title, description, video}) {
+function MealModal({title, description, video, category}) {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
   return (
     <>
-      <button class="btn btn-danger" onClick={handleShow}>
+      <button className="btn btn-danger" onClick={handleShow}>
         Recipe
       </button>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>{title}</Modal.Title>
+          <Modal.Title>
+            <div className="row">
+              <div className="col">{title}</div>
+            </div>
+            <div className="row">
+              <h4 className="col-highlight" style={{fontSize: "1rem"}}>
+                {category}
+              </h4>
+            </div>
+          </Modal.Title>
         </Modal.Header>
-        {/* <Modal.Body>{description}</Modal.Body> */}
-        <Modal.Body>Procedure : {description}</Modal.Body>
         <Modal.Body>
-          <button class="btn btn-outline-danger" href={video}>
-            Video
-          </button>
+          <h4>Procedure :</h4> {description}
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
+        <Modal.Body>
+          <Button variant="danger" href={video}>
+            Video
           </Button>
-        </Modal.Footer>
+        </Modal.Body>
       </Modal>
     </>
   );

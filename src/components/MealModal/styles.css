@@ -1,0 +1,9 @@
+.col-highlight{
+    background-color: #baffac;
+    margin-left: 0.75rem;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0%;
+}

@@ -18,7 +18,7 @@ function App() {
           <Route exact path="/signup" element={<Signup />} />
           <Route path="*" element={<Error />} />
         </Routes>
-        {/* <Footer /> */}
+        <Footer />
       </AppContext>
     </BrowserRouter>
   );

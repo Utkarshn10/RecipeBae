@@ -1,13 +1,11 @@
 import React from "react";
-import {Navbar, Container, Nav, NavDropdown} from "react-bootstrap";
-import {LinkContainer} from "react-router-bootstrap";
+import {Navbar, Container} from "react-bootstrap";
+
 function AppNavbar() {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <LinkContainer to="/">
-          <Navbar.Brand> Meals</Navbar.Brand>
-        </LinkContainer>
+        <Navbar.Brand href="/"> Meals</Navbar.Brand>
       </Container>
     </Navbar>
   );

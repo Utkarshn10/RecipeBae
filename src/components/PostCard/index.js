@@ -31,6 +31,7 @@ function PostCard({
           title={strMeal}
           description={strInstructions}
           video={strYoutube}
+          category={strCategory}
         />
       </Card.Body>
     </Card>
