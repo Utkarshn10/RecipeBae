@@ -7,6 +7,7 @@ function PostCard({
   strCategory,
   strInstructions,
   strArea,
+  strYoutube,
   strMealThumb,
   strMeal,
 }) {
@@ -26,7 +27,11 @@ function PostCard({
       <Card.Body>
         <Card.Title>{strMeal}</Card.Title>
         <Card.Text>{strArea}</Card.Text>
-        <MealModal title={strMeal} description={strInstructions} />
+        <MealModal
+          title={strMeal}
+          description={strInstructions}
+          ingredients={strYoutube}
+        />
       </Card.Body>
     </Card>
   );
