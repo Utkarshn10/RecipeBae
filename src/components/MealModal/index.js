@@ -1,7 +1,7 @@
 import React, {useState, Fragment} from "react";
 import {Modal, Button} from "react-bootstrap";
 import "./styles.css";
-import ReactPlayer from "react-player";
+import ReactPlayer from "react-player/lazy";
 
 function MealModal({title, description, video, category}) {
   const [show, setShow] = useState(false);
