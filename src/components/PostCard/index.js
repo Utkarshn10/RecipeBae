@@ -22,7 +22,7 @@ function PostCard({
   };
 
   return (
-    <Card style={{width: "18rem"}}>
+    <Card className="card-structure" style={{width: "18rem"}}>
       <Card.Img variant="top" src={strMealThumb} />
       <Card.Body>
         <Card.Title>{strMeal}</Card.Title>

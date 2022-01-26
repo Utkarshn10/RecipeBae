@@ -1,6 +1,10 @@
+.card-structure{
+  border-radius: 1em;
+}
 .card{
     border-bottom: 2rem;
     margin-top: 2rem;
+    border-radius: 1em;
 }
 .card:hover::before, .card:hover::after, .card:focus::before, .card:focus::after {
     transform: scale3d(1, 1, 1);
