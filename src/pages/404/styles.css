@@ -3,3 +3,6 @@
     display: flex;
     align-items: center;
 }
+.error-image{
+    background-image: url("../../images/error.jpg");
+}

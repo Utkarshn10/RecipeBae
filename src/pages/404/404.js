@@ -1,10 +1,11 @@
 import React from "react";
-
+import image from "../../images/error.jpg";
 function Error() {
   return (
     <div>
       <div className="error-heading">
-        <h1>Sorry ! searched meal doesn't exist</h1>
+        <img height="30%" src={image} />
+        <h1>Sorry, no meals were found</h1>
       </div>
     </div>
   );
