@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {Modal, Button} from "react-bootstrap";
 import "./styles.css";
+import ReactPlayer from "react-player";
 
 function MealModal({title, description, video, category}) {
   const [show, setShow] = useState(false);
@@ -30,9 +31,7 @@ function MealModal({title, description, video, category}) {
           <h4>Procedure :</h4> {description}
         </Modal.Body>
         <Modal.Body>
-          <Button variant="danger" href={video}>
-            Video
-          </Button>
+          <ReactPlayer width="100%" url={video}></ReactPlayer>
         </Modal.Body>
       </Modal>
     </>
