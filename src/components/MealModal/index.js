@@ -1,13 +1,29 @@
-import React, {useState} from "react";
+import React, {useState, Fragment} from "react";
 import {Modal, Button} from "react-bootstrap";
 import "./styles.css";
 import ReactPlayer from "react-player";
 
 function MealModal({title, description, video, category}) {
   const [show, setShow] = useState(false);
+  const [desc, setDesc] = useState("");
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const handleShow = () => {
+    setShow(true);
+    handleProcedure();
+  };
 
+  function handleProcedure() {
+    setDesc(
+      description.split(".").map((value, index) => {
+        return (
+          <Fragment key={index}>
+            • {value}
+            <br />
+          </Fragment>
+        );
+      })
+    );
+  }
   return (
     <>
       <button className="btn btn-danger" onClick={handleShow}>
@@ -28,7 +44,7 @@ function MealModal({title, description, video, category}) {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <h4>Procedure :</h4> {description}
+          <h4>Procedure :</h4> {desc}
         </Modal.Body>
         <Modal.Body>
           <ReactPlayer width="100%" url={video}></ReactPlayer>
