@@ -4,7 +4,7 @@ function Error() {
   return (
     <div>
       <div className="error-heading">
-        <img height="30%" src={image} />
+        <img width="100%" height="30%" src={image} />
         <h1>Sorry, no meals were found</h1>
       </div>
     </div>
