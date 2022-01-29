@@ -1,9 +1,16 @@
 import React, {useState, useContext} from "react";
 import styles from "./styles.css";
-import {InputGroup, FormControl} from "react-bootstrap";
 import {MyContext} from "../../context";
 import Error from "../../pages/404/404";
 import axios from "axios";
+import {SearchIcon} from "@chakra-ui/icons";
+import {
+  InputGroup,
+  FormControl,
+  Input,
+  IconButton,
+  useColorModeValue,
+} from "@chakra-ui/react";
 
 function Jumbotron() {
   const {setPosts} = useContext(MyContext);
@@ -41,23 +48,23 @@ function Jumbotron() {
           <h1 style={{fontSize: "4rem"}}>Recipe Bae</h1>
           <h6 style={{fontSize: "1rem"}}>Search your favorite meals</h6>
           <div className="button-input">
-            <InputGroup className="mb-3">
-              <FormControl
-                placeholder="Search for cuisine or a dish"
-                aria-label="Meal Search Input"
-                aria-describedby="meal-search-button"
-                value={searchInput}
-                onChange={handleChange}
-                onKeyDown={handleKeyDown}
-              ></FormControl>
-              <button
-                type="button"
-                className="btn btn-danger"
-                onClick={handleSearch}
-              >
-                Search
-              </button>
-            </InputGroup>
+            <FormControl>
+              <InputGroup size="sm">
+                <Input
+                  placeholder="Search for cuisine or a dish"
+                  onChange={handleChange}
+                  onKeyDown={handleKeyDown}
+                  id={searchInput}
+                  type="search-input"
+                />
+                <IconButton
+                  colorScheme="red"
+                  aria-label="Search database"
+                  icon={<SearchIcon />}
+                  onClick={handleSearch}
+                />
+              </InputGroup>
+            </FormControl>
           </div>
         </div>
         <div className="error">
@@ -68,26 +75,26 @@ function Jumbotron() {
   } else {
     return (
       <div className="jumbotron">
-        <h1 style={{fontSize: "4rem"}}>Recipe Bae</h1>
-        <h6 style={{fontSize: "2rem"}}>Search your favorite meals</h6>
+        <h1 style={{fontSize: "4rem"}}>RecipeBae</h1>
+        <h6 style={{fontSize: "2rem"}}>Search your favorite cuisines</h6>
         <div className="button-input">
-          <InputGroup className="mb-3">
-            <FormControl
-              placeholder="Search for cuisine or a dish"
-              aria-label="Meal Search Input"
-              aria-describedby="meal-search-button"
-              value={searchInput}
-              onChange={handleChange}
-              onKeyDown={handleKeyDown}
-            ></FormControl>
-            <button
-              type="button"
-              className="btn btn-danger"
-              onClick={handleSearch}
-            >
-              Search
-            </button>
-          </InputGroup>
+          <FormControl>
+            <InputGroup size="sm">
+              <Input
+                placeholder="Search for cuisine or a dish"
+                onChange={handleChange}
+                onKeyDown={handleKeyDown}
+                id={searchInput}
+                type="search-input"
+              />
+              <IconButton
+                colorScheme="red"
+                aria-label="Search database"
+                icon={<SearchIcon />}
+                onClick={handleSearch}
+              />
+            </InputGroup>
+          </FormControl>
         </div>
       </div>
     );
