@@ -1,12 +1,16 @@
-import React from "react";
+import React, {lazy, Suspense} from "react";
 import Jumbotron from "../../components/Jumbotron";
 import {useEffect, useContext} from "react";
 import axios from "axios";
-import PostContainer from "../../components/PostContainer";
 import {MyContext} from "../../context";
+import {Spinner} from "@chakra-ui/react";
+
+const PostContainer = lazy(() => import("../../components/PostContainer"));
 
 function Home() {
   const {posts, setPosts} = useContext(MyContext);
+
+  const renderLoader = () => <Spinner color="red.500" />;
 
   useEffect(() => {
     axios
@@ -18,10 +22,12 @@ function Home() {
   }, []);
 
   return (
-    <div>
-      <Jumbotron />
-      <PostContainer posts={posts} />
-    </div>
+    <Suspense fallback={renderLoader()}>
+      <div>
+        <Jumbotron />
+        <PostContainer posts={posts} />
+      </div>
+    </Suspense>
   );
 }
 export default Home;

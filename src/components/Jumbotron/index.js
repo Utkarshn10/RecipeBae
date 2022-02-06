@@ -4,13 +4,7 @@ import {MyContext} from "../../context";
 import Error from "../../pages/404/404";
 import axios from "axios";
 import {SearchIcon} from "@chakra-ui/icons";
-import {
-  InputGroup,
-  FormControl,
-  Input,
-  IconButton,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import {InputGroup, FormControl, Input, IconButton} from "@chakra-ui/react";
 
 function Jumbotron() {
   const {setPosts} = useContext(MyContext);
