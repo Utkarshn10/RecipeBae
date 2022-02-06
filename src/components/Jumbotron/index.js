@@ -5,6 +5,7 @@ import axios from "axios";
 import {SearchIcon} from "@chakra-ui/icons";
 import {InputGroup, FormControl, Input, IconButton} from "@chakra-ui/react";
 import Image from "../../images/jumbotron.webp";
+import Img from "react-cloudinary-lazy-image";
 
 // const Image = lazy(() => import("../../images/jumbotron.webp"));
 const Error = lazy(() => import("../../pages/404/404"));
@@ -41,7 +42,7 @@ function Jumbotron() {
   if (!found) {
     return (
       <>
-        <div
+        <Img
           className="jumbotron"
           style={{
             backgroundImage: `linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),url(${Image})`,
@@ -70,7 +71,7 @@ function Jumbotron() {
               </InputGroup>
             </FormControl>
           </div>
-        </div>
+        </Img>
         <div className="error">
           <Error />
         </div>
