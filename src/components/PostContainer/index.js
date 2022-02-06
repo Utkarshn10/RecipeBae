@@ -1,11 +1,16 @@
-import React from "react";
+import React, {lazy, Suspense} from "react";
+import {Spinner} from "@chakra-ui/react";
 import "./styles.css";
-import PostCard from "../PostCard";
+
+const PostCard = lazy(() => import("../PostCard"));
 
 function PostsContainer({posts}) {
+  const renderLoader = () => <Spinner color="red.500" />;
   return (
     <div className="posts-container">
-      {posts && posts.map((post) => <PostCard key={post.idMeal} {...post} />)}
+      <Suspense fallback={renderLoader()}>
+        {posts && posts.map((post) => <PostCard key={post.idMeal} {...post} />)}
+      </Suspense>
     </div>
   );
 }
