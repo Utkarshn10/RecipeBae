@@ -1,12 +1,12 @@
-import React, {useState, useContext} from "react";
+import React, {useState, useContext, lazy} from "react";
 import styles from "./styles.css";
 import {MyContext} from "../../context";
-import Error from "../../pages/404/404";
 import axios from "axios";
 import {SearchIcon} from "@chakra-ui/icons";
 import {InputGroup, FormControl, Input, IconButton} from "@chakra-ui/react";
 import image from "../../images/jumbotron.webp";
 
+const Error = lazy(() => import("../../pages/404/404"));
 function Jumbotron() {
   const {setPosts} = useContext(MyContext);
   const [searchInput, setsearchInput] = useState("");
