@@ -4,9 +4,10 @@ import {MyContext} from "../../context";
 import axios from "axios";
 import {SearchIcon} from "@chakra-ui/icons";
 import {InputGroup, FormControl, Input, IconButton} from "@chakra-ui/react";
-import image from "../../images/jumbotron.webp";
 
+const Image = lazy(() => import("../../images/jumbotron.webp"));
 const Error = lazy(() => import("../../pages/404/404"));
+
 function Jumbotron() {
   const {setPosts} = useContext(MyContext);
   const [searchInput, setsearchInput] = useState("");
@@ -41,7 +42,10 @@ function Jumbotron() {
       <>
         <div
           className="jumbotron"
-          style={{backgroundImage: `url(${image})`, backgroundSize: "cover"}}
+          style={{
+            backgroundImage: `linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),url(${Image})`,
+            backgroundSize: "cover",
+          }}
         >
           <h1 style={{fontSize: "4rem"}}>Recipe Bae</h1>
           <h6 style={{fontSize: "1rem"}}>Search your favorite meals</h6>
@@ -75,7 +79,7 @@ function Jumbotron() {
       <div
         className="jumbotron"
         style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),url(${image})`,
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),url(${Image})`,
           backgroundSize: "cover",
         }}
       >
