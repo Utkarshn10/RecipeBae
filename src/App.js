@@ -7,6 +7,7 @@ import Error from "./pages/404/404";
 import Login from "./pages/Login/Login";
 import Signup from "./pages/Signup/Signup";
 import Footer from "./components/Footer";
+
 function App() {
   return (
     <BrowserRouter>

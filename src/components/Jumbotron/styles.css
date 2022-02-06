@@ -1,5 +1,5 @@
 .jumbotron{
-    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)), url("../../images/edgar-castrejon-1SPu0KT-Ejg-unsplash.jpg");    
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8));    
     background-repeat: 'none';
     background-position: center;
     background-size: 100%;

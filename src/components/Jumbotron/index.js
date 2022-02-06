@@ -4,8 +4,14 @@ import {MyContext} from "../../context";
 import Error from "../../pages/404/404";
 import axios from "axios";
 import {SearchIcon} from "@chakra-ui/icons";
-import {InputGroup, FormControl, Input, IconButton} from "@chakra-ui/react";
-
+import {
+  InputGroup,
+  FormControl,
+  Input,
+  IconButton,
+  background,
+} from "@chakra-ui/react";
+import image from "../../images/jumbotron.jpg";
 function Jumbotron() {
   const {setPosts} = useContext(MyContext);
   const [searchInput, setsearchInput] = useState("");
@@ -38,7 +44,10 @@ function Jumbotron() {
   if (!found) {
     return (
       <>
-        <div className="jumbotron">
+        <div
+          className="jumbotron"
+          style={{backgroundImage: `url(${image})`, backgroundSize: "cover"}}
+        >
           <h1 style={{fontSize: "4rem"}}>Recipe Bae</h1>
           <h6 style={{fontSize: "1rem"}}>Search your favorite meals</h6>
           <div className="button-input">
@@ -68,7 +77,13 @@ function Jumbotron() {
     );
   } else {
     return (
-      <div className="jumbotron">
+      <div
+        className="jumbotron"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),url(${image})`,
+          backgroundSize: "cover",
+        }}
+      >
         <h1 style={{fontSize: "4rem"}}>RecipeBae</h1>
         <h6 style={{fontSize: "2rem"}}>Search your favorite cuisines</h6>
         <div className="button-input">

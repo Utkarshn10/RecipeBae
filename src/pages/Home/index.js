@@ -22,12 +22,12 @@ function Home() {
   }, []);
 
   return (
-    <Suspense fallback={renderLoader()}>
-      <div>
+    <div>
+      <Suspense fallback={renderLoader()}>
         <Jumbotron />
         <PostContainer posts={posts} />
-      </div>
-    </Suspense>
+      </Suspense>
+    </div>
   );
 }
 export default Home;
