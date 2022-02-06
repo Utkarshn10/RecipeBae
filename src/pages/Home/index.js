@@ -12,8 +12,8 @@ function Home() {
 
   const renderLoader = () => <Spinner color="red.500" />;
 
-  useEffect(() => {
-    axios
+  useEffect(async () => {
+    await axios
       .get("https://www.themealdb.com/api/json/v1/1/search.php?s")
       .then(({data}) => setPosts(data.meals))
       .catch((error) => {
