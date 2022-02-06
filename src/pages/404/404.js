@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../../images/error.jpg";
+import image from "../../images/error.webp";
 function Error() {
   return (
     <div>
