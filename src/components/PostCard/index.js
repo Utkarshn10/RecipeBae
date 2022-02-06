@@ -1,8 +1,6 @@
-import React, {useState} from "react";
-import {Card} from "react-bootstrap";
+import React from "react";
 import MealModal from "../MealModal";
 import {
-  Flex,
   Box,
   Image,
   Center,

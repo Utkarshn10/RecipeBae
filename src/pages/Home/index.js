@@ -1,10 +1,10 @@
-import React, {useState} from "react";
+import React from "react";
 import Jumbotron from "../../components/Jumbotron";
 import {useEffect, useContext} from "react";
 import axios from "axios";
 import PostContainer from "../../components/PostContainer";
 import {MyContext} from "../../context";
-import Error from "../404/404";
+
 function Home() {
   const {posts, setPosts} = useContext(MyContext);
 

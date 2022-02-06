@@ -1,4 +1,4 @@
-import React, {useState, Fragment} from "react";
+import React from "react";
 import "./styles.css";
 import ReactPlayer from "react-player/lazy";
 import {
@@ -17,20 +17,22 @@ import {
 function MealModal({title, description, video, category}) {
   const {isOpen, onOpen, onClose} = useDisclosure();
 
-  const [desc, setDesc] = useState("");
+  //----- Not beig used
 
-  function handleProcedure() {
-    setDesc(
-      description.split(".").map((value, index) => {
-        return (
-          <Fragment key={index}>
-            • {value}
-            <br />
-          </Fragment>
-        );
-      })
-    );
-  }
+  // const [desc, setDesc] = useState("");
+
+  // function handleProcedure() {
+  //   setDesc(
+  //     description.split(".").map((value, index) => {
+  //       return (
+  //         <Fragment key={index}>
+  //           • {value}
+  //           <br />
+  //         </Fragment>
+  //       );
+  //     })
+  //   );
+  // }
   return (
     <>
       <Button colorScheme="red" onClick={onOpen}>
