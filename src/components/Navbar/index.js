@@ -21,7 +21,7 @@ export default function Nav() {
           </Box>
           <Flex alignItems={"center"}>
             <Stack direction={"row"} spacing={7}>
-              <Button onClick={toggleColorMode}>
+              <Button className="theme-button" onClick={toggleColorMode}>
                 {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
               </Button>
               <Badge />

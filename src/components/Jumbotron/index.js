@@ -4,8 +4,9 @@ import {MyContext} from "../../context";
 import axios from "axios";
 import {SearchIcon} from "@chakra-ui/icons";
 import {InputGroup, FormControl, Input, IconButton} from "@chakra-ui/react";
+import Image from "../../images/jumbotron.webp";
 
-const Image = lazy(() => import("../../images/jumbotron.webp"));
+// const Image = lazy(() => import("../../images/jumbotron.webp"));
 const Error = lazy(() => import("../../pages/404/404"));
 
 function Jumbotron() {
@@ -60,6 +61,7 @@ function Jumbotron() {
                   type="search-input"
                 />
                 <IconButton
+                  className="icon-button"
                   colorScheme="red"
                   aria-label="Search database"
                   icon={<SearchIcon />}
@@ -96,6 +98,7 @@ function Jumbotron() {
                 type="search-input"
               />
               <IconButton
+                className="icon-button"
                 colorScheme="red"
                 aria-label="Search database"
                 icon={<SearchIcon />}

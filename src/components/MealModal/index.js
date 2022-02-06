@@ -35,7 +35,7 @@ function MealModal({title, description, video, category}) {
   // }
   return (
     <>
-      <Button colorScheme="red" onClick={onOpen}>
+      <Button className="recipe-button" colorScheme="red" onClick={onOpen}>
         Recipe
       </Button>
 
@@ -66,7 +66,12 @@ function MealModal({title, description, video, category}) {
             <ReactPlayer width="100%" url={video}></ReactPlayer>
           </ModalBody>
           <ModalFooter>
-            <Button colorScheme="red" mr={3} onClick={onClose}>
+            <Button
+              className="close-button"
+              colorScheme="red"
+              mr={3}
+              onClick={onClose}
+            >
               Close
             </Button>
           </ModalFooter>
