@@ -47,6 +47,7 @@ function PostCard({
           >
             <Image
               borderRadius="lg"
+              alt="${strMeal} image"
               w="full"
               mb={4}
               h={"full"}
