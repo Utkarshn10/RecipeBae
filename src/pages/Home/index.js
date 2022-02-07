@@ -5,13 +5,16 @@ import axios from "axios";
 import {MyContext} from "../../context";
 import {Spinner} from "@chakra-ui/react";
 
+// lazy loading 
 const PostContainer = lazy(() => import("../../components/PostContainer"));
 
 function Home() {
   const {posts, setPosts} = useContext(MyContext);
 
+//   loader for lazy loading
   const renderLoader = () => <Spinner color="red.500" />;
 
+//   Fetching data shown on HomePage
   useEffect(async () => {
     await axios
       .get("https://www.themealdb.com/api/json/v1/1/search.php?s")
