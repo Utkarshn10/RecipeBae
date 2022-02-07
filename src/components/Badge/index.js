@@ -1,6 +1,8 @@
 import React from "react";
 import {Flex, Link, Box, Text} from "@chakra-ui/react";
 import {IoLogoGithub} from "react-icons/io5";
+
+// Navbar Github Badge
 function index() {
   return (
     <Link href="https://github.com/Utkarshn10">
