@@ -1,8 +1,7 @@
 # Recipe Bae
 
-## A Place to find Recipes/Video Recipes of your favourite Cuisines.
-
-## Visit here: [RecipeBae](https://recipebae.vercel.app/)
+## A Place to find Recipes/Video Recipes of your favourite Cuisines. 
+  Visit here: [RecipeBae](https://recipebae.vercel.app/)
 
 ![Screenshot (366)](https://user-images.githubusercontent.com/58587256/152737090-58c94aa4-7e91-4a38-960d-82af3f2dbddb.png)
 
