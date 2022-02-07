@@ -17,7 +17,7 @@ import {
 function MealModal({title, description, video, category}) {
   const {isOpen, onOpen, onClose} = useDisclosure();
 
-  //----- Not being used
+  //----- Not being used , will be used in future
 
   // const [desc, setDesc] = useState("");
 
@@ -33,6 +33,9 @@ function MealModal({title, description, video, category}) {
   //     })
   //   );
   // }
+  
+  // Modal to show recipe when clicked on card
+  
   return (
     <>
       <Button className="recipe-button" colorScheme="red" onClick={onOpen}>
