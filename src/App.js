@@ -8,13 +8,12 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
+    // Routes
     <BrowserRouter>
       <AppContext>
         <Navbar />
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route exact path="/login" element={<Login />} />
-          <Route exact path="/signup" element={<Signup />} />
           <Route path="*" element={<Error />} />
         </Routes>
         <Footer />
