@@ -1,5 +1,7 @@
 import React from "react";
 import image from "../../images/error.webp";
+
+// Page to show Error for invalid searches
 function Error() {
   return (
     <div>
