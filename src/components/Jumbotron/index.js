@@ -15,16 +15,21 @@ function Jumbotron() {
   const [searchInput, setsearchInput] = useState("");
   const [found, setFound] = useState(true);
 
+  // Handle the search Input
   function handleChange(e) {
     setsearchInput(e.target.value);
   }
 
+  // Perform the search when "ENTER" key is pressed
+  
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
       handleSearch();
     }
   };
 
+  // function to handle the search
+  
   async function handleSearch() {
     await axios
       .get(
@@ -39,6 +44,8 @@ function Jumbotron() {
       });
   }
 
+  // Searched meal is not found
+  
   if (!found) {
     return (
       <>
@@ -77,7 +84,11 @@ function Jumbotron() {
         </div>
       </>
     );
-  } else {
+  } 
+  
+  // searched meal is found
+  
+  else {
     return (
       <div
         className="jumbotron"
