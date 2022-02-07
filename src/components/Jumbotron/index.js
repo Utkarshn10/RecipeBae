@@ -7,7 +7,6 @@ import {InputGroup, FormControl, Input, IconButton} from "@chakra-ui/react";
 import Image from "../../images/jumbotron.webp";
 import Img from "react-cloudinary-lazy-image";
 
-// const Image = lazy(() => import("../../images/jumbotron.webp"));
 const Error = lazy(() => import("../../pages/404/404"));
 
 function Jumbotron() {
