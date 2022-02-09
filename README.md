@@ -15,8 +15,8 @@
 ### Install
 
 ```
-git clone 
-cd 
+git clone https://github.com/YOUR-USERNAME/RecipBae
+cd RecipBae
 npm install
 ```
 
