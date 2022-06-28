@@ -25,3 +25,5 @@ npm install
 ```
 npm start
 ```
+
+## If you liked this project or it helped you then do give it a ⭐.
