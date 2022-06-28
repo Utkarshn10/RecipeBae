@@ -9,7 +9,7 @@ import ReactGA from 'react-ga';
 
 
 function App() {
-  const TRACKING_ID = "UA-227663956-1"; // OUR_TRACKING_ID
+  const TRACKING_ID = process.env.TRACKING_ID; // OUR_TRACKING_ID
   ReactGA.initialize(TRACKING_ID);
   return (
     // Routes
