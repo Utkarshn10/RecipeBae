@@ -5,7 +5,11 @@ Checkout the website here: [RecipeBae](https://recipebae.vercel.app/)
 
 ![Screenshot (366)](https://user-images.githubusercontent.com/58587256/152737090-58c94aa4-7e91-4a38-960d-82af3f2dbddb.png)
 
-![Screenshot (367)](https://user-images.githubusercontent.com/58587256/152737050-75c8e328-fc1e-414b-817e-8e54d24d6718.png)
+
+## Tech Used
+
+<img alt="React" src="https://img.shields.io/badge/react-%236B74E0.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"/> <img alt="React router" src="https://img.shields.io/badge/reactrouter-%230671D5.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"/><img alt="Chakra UI" src="https://img.shields.io/badge/Chakra UI-%2311C684.svg?style=for-the-badge&logo=Chakra UI&logoColor=140200"/> 
+
 
 # Development
 
