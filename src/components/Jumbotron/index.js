@@ -3,11 +3,10 @@ import styles from "./styles.css";
 import {MyContext} from "../../context";
 import axios from "axios";
 import {SearchIcon} from "@chakra-ui/icons";
-import {InputGroup, FormControl, Input, IconButton} from "@chakra-ui/react";
+import {InputGroup, FormControl, Input, IconButton,Alert,AlertIcon,AlertDescription,AlertTitle} from "@chakra-ui/react";
 import Image from "../../images/jumbotron.webp";
 import Img from "react-cloudinary-lazy-image";
-
-const Error = lazy(() => import("../../pages/404/404"));
+import Error from "../../pages/404/404";
 
 function Jumbotron() {
   const {setPosts} = useContext(MyContext);
@@ -48,7 +47,7 @@ function Jumbotron() {
   if (!found) {
     return (
       <>
-        <Img
+        <div
           className="jumbotron"
           style={{
             backgroundImage: `linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)),url(${Image})`,
@@ -77,7 +76,7 @@ function Jumbotron() {
               </InputGroup>
             </FormControl>
           </div>
-        </Img>
+        </div>
         <div className="error">
           <Error />
         </div>
