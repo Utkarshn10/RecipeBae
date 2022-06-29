@@ -7,7 +7,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Error from "./pages/404/404";
 import Footer from "./components/Footer";
 import ReactGA from 'react-ga';
-const TRACKING_ID = process.env.TRACKING_ID; // OUR_TRACKING_ID
+const TRACKING_ID = "UA-G-2VD2XRSHT8"; // OUR_TRACKING_ID
 ReactGA.initialize(TRACKING_ID);
 
 function App() {
